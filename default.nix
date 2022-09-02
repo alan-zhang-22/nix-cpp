@@ -2,12 +2,13 @@
 , llvmPackages_11
 , cmake
 , spdlog
-, abseil-cpp }:
+, abseil-cpp
+}:
 
 llvmPackages_11.stdenv.mkDerivation rec {
-  pname = "cpp-examples";
+  pname = "nix-cpp";
   version = "0.1.0";
-  
+
   src = ./.;
 
   nativeBuildInputs = [ cmake ];
@@ -25,6 +26,6 @@ llvmPackages_11.stdenv.mkDerivation rec {
     '';
     licencse = licenses.mit;
     platforms = with platforms; linux ++ darwin;
-    maintainers = [ maintainers.breakds ];    
+    maintainers = [ maintainers.breakds ];
   };
 }
